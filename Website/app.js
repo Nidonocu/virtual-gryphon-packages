@@ -239,4 +239,15 @@ const setTheme = () => {
   packageInfoListingHelp.addEventListener('click', () => {
     addListingToVccHelp.hidden = false;
   });
+
+
+  const imgElement = document.getElementById("footer-logo");
+
+  const fallbackURL = "nidonocu_vr_logo.png";
+
+  imgElement.onerror = function () {
+    imgElement.onerror = null;
+    imgElement.src = fallbackURL;
+  }
+
 })();
